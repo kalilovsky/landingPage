@@ -6,8 +6,17 @@
     font-family: 'Poppins', sans-serif;
     
 }
+//déclaration des variable pour el changement entre
+//mode dark et soft
+:root{
+    --white:#fff;
+    --white2:#fff;
+    --black:#333;
+    --black2:rgb(75, 74, 74);
+}
 body{
     overflow-x: hidden;
+
 }
 section{
     min-height: 100vh;
@@ -21,15 +30,10 @@ section{
     width: calc(100% - 300px);
     left: 300px;
     min-height: 100vh;
-   
-    
-    background-color: black;
-    /* background: url(./bg.jpg);
-    background-size: cover; */
-    /* display: flex;
-    align-items: center; */
+    background-color: var(--black);
     overflow-x: hidden;
     transition: 0.5s;
+    background-color: var(--black2);
    &.active {
     left: 0;
     width: 100%;
@@ -48,7 +52,7 @@ section{
         z-index: 10000;
         transition: 0.5s;
         border-bottom: solid 1px rgba(255, 255, 255, 0.1);
-        background-color: black;
+        background-color: var(--black);
         &.active{
             left: 0;
             width: calc(100%);
@@ -56,7 +60,7 @@ section{
         .logo{
             position: relative;
             font-weight: 700;
-            color: rgb(255, 255, 255);
+            color: var(--white);
             text-decoration: none;
             font-size: 2em ;
             text-transform: uppercase;
@@ -76,7 +80,7 @@ section{
             top: 7px;
             width: 100%;
             height: 2px;
-            background:#ffffff;
+            background:var(--white);
             
             transition: 0.2s;
         }
@@ -86,7 +90,7 @@ section{
             bottom: 7px;
             width: 100%;
             height: 2px;
-            background:rgb(255, 255, 255);
+            background:var(--white);
             
             
         }
@@ -121,7 +125,7 @@ section{
                 }
             }
             h2{
-                color: #fff;
+                color: var(--white);
                 font-size: 2.5em;
                 span {
                     color: #40c3FF;
@@ -130,7 +134,7 @@ section{
             }
             p {
                 font-size: 1.2em;
-                color: #fff;
+                color: var(--white);
                 font-weight: 300;
             
             }
@@ -139,8 +143,8 @@ section{
                 display: inline-block;
                 width: 210px;
                 margin-top: 20px;
-                background: #fff;
-                color: #000;
+                background: var(--white);
+                color: var(--black);
                 padding: 10px 30px;
                 text-decoration: none;
                 text-align: center;
@@ -157,14 +161,14 @@ section{
                 position: relative;
                 display: flex;
                 margin: 20px;
-                color: white;
+                color: var(--white);
                 li{
                     list-style: none;
                     a{
                         display: inline-block;
                         width: 40px;
                         height: 40px;
-                        background-color: white;
+                        background-color: var(--white);
                         margin: 5px;
                         display: flex;
                         justify-content: center;
@@ -173,7 +177,7 @@ section{
                         font-size: 1.2em;
                         &:hover{
                             background: gray;
-                            color: whitesmoke;
+                            color: var(--white);
                         }
                     }
                 }
@@ -181,18 +185,11 @@ section{
         }
     }
     
-    
-    .aPropos{
-        position: relative;
-        min-height: 100vh;
-        padding: 0 40px;
-        padding-top: 80px;
-        background: black;
-        color: blanchedalmond;
-        display: inline-block;
-        .titre{
+    // Titre de chaque section qui se répéte
+    .titre{
             text-align: center;
             width: 100%;
+            color: var(--white);
             h2 {
                 position: relative;
                 text-transform: uppercase;
@@ -207,14 +204,138 @@ section{
                     bottom: -10px;
                     width: 50px;
                     height: 1px;
-                    background: white;
+                    background: var(--white);
                 }
             }
+    }
+    //page 2 a propos
+    .aPropos{
+        position: relative;
+        min-height: 100vh;
+        padding: 0 40px;
+        padding-top: 80px;
         
+        color: var(--white);
+        display: inline-block;
+        
+            
+        
+        .content{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            .textBox{
+                width: 49%;
+                min-width: 49%;
+            }
+            .imgBox{
+                margin-left: 40px;
+                img{
+                    max-width: 100%;
+                    border-radius: 20px;
+                }
+            }
         }
     }
     
-   
+    //page 3 services
+    .services{
+        color: var(--white);
+        position: relative;
+        min-height: 100vh;
+        padding: 0 40px;
+        padding-top: 80px;
+        .title{
+            text-align: center;
+            width: 100%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .content{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            margin: 40px 0;
+            gap: 20px;
+            .serviceBox{
+                border: 1px solid rgba(255, 255, 255,0.2);
+                padding: 50px 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                img {
+                    max-width: 50px;
+                    filter: invert(1);
+                }
+                h2{
+                    font-size: 1.1em;
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                    font-weight: 600;
+                    color: var(--white);
+                    text-align: center;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                }
+                p{
+                    text-align: center;
+
+                }
+            }
+        }
+        
+    }
+   //page 4 portfolio
+   .portfolio{
+        color: var(--white);
+        
+        
+        padding: 0 40px;
+        padding-top: 80px; 
+        .content{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+            margin: 40px 0;
+            .slideBox{
+                position: relative;
+                border: 1px solid rgba(255, 255, 255,0.2);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                min-height: 200px;
+                min-width: 200px;
+                overflow-y: hidden;
+                .imgBox{
+                    img{
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .textBox{
+                    position: absolute;
+                    top: 100%;
+                    min-height: 100%;
+                    min-width: 100%;
+                    background-color: yellow;
+                    transition: top 0.5s , background-color 1s;
+                }
+                &:hover{
+                    .textBox{
+                        position: absolute;
+                        top: 0;
+                        min-height: 100%;
+                        min-width: 100%;
+                        background-color: rgb(38, 0, 255);
+                    } 
+                }
+            }
+        }
+   }
 }
 
 
@@ -224,7 +345,7 @@ section{
     left: 0px;
     width: 300px;
     height: 100vh;
-    background: #000000;
+    background: var(--black);
     border-right: solid 1px rgba(255,255,255,0.1);
     z-index: 1;
     display: grid;
@@ -241,7 +362,7 @@ section{
         li {
             list-style: none;
             a{
-                color: #fff;
+                color: var(--white);
                 text-decoration: none;
                 display: inline-block;
                 font-size: 1.6em;
