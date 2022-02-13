@@ -37,6 +37,7 @@ section {
   left: 300px;
   min-height: 100vh;
   background-color: var(--white2);
+  overflow-x: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -470,6 +471,7 @@ section {
   min-width: 200px;
   max-height: 400px;
   max-width: 400px;
+  overflow-y: hidden;
   cursor: pointer;
 }
 
@@ -564,6 +566,7 @@ section {
   height: 100vh;
   background: var(--white);
   border-right: solid 1px rgba(19, 15, 15, 0.2);
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -576,10 +579,14 @@ section {
           justify-content: center;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  white-space: nowrap;
 }
 
 #navigation.active {
-  left: -300px;
+  left: 0;
+  width: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #navigation .listes {
@@ -703,136 +710,44 @@ section {
   pointer-events: none;
 }
 
-@media (max-width: 1024px) {
-  .main {
-    padding: 100px 50px 150px;
-    left: 0px;
-    width: calc(100%);
-  }
-  .main.active {
-    left: 100%;
-    width: calc(100%);
-  }
-  .main.active .services .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .main.active .portfolio .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .main .topBar {
-    left: 0px;
-    width: calc(100%);
-  }
-  .main .services .content {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-  .main .portfolio .content {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-  .main .portfolio .popupPortfolio {
-    width: calc(100% - 40px);
-    left: calc(50%);
-  }
-  .main .portfolio .popupPortfolio.active {
-    left: calc(50% + 125px);
-    width: calc(100% - 290px);
-  }
-  .main .portfolio .popupPortfolio.visible {
-    left: calc(50%);
-  }
-  .main .portfolio .popupPortfolio.visible.active {
-    left: calc(50% + 125px);
-    width: calc(100% - 290px);
-  }
+@media (max-width: 992px) {
   #navigation {
-    width: 250px;
-    left: -250px;
+    left: 0;
+    width: 0%;
+    z-index: 10000;
   }
   #navigation.active {
-    left: 0px;
-  }
-  #navigation .listes {
-    margin: 10px 10px;
-    font-weight: 400;
-    font-size: 0.8em;
-  }
-  #navigation .listes::before {
-    height: 30px;
-    width: 30px;
-    top: 3px;
-    left: 3px;
-  }
-  #navigation .listes:hover::before {
+    left: 0;
     width: 100%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
   }
-  #navigation .listes .num {
-    font-weight: 400;
-    margin-right: 0px;
-  }
-  #navigation .colorMode {
-    left: 20px;
-  }
-  #navigation .colorMode::after {
-    content: "Dark Mode";
-  }
-  .darkMode #navigation .colorMode::after {
-    content: "Light Mode";
-  }
-}
-
-@media (max-width: 767px) {
   .main {
-    padding: 100px 50px 150px;
-    left: 0px;
-    width: calc(100%);
-  }
-  .main.active {
-    left: 100%;
-    width: calc(100%);
+    width: 100%;
+    left: 0;
   }
   .main .topBar {
-    left: 0px;
-    width: calc(100%);
+    left: 0;
+    width: 100%;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
   }
-  .main .topBar .logo {
-    font-size: 1.6em;
+  .main .topBar.active {
+    left: 0;
+    width: 100vw;
   }
-  .main .banner .content h2 {
-    font-size: 1.4em;
-    text-align: center;
+  .main .banner .content h2 span {
+    font-size: 0.6em;
   }
   .main .banner .content p {
-    text-align: center;
     font-size: 1em;
-  }
-  .main .aPropos {
-    padding: 0;
-    padding-top: 80px;
-  }
-  .main .aPropos .titre h2 {
-    white-space: nowrap;
+    text-align: center;
+    font-weight: 400;
   }
   .main .aPropos .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -840,110 +755,45 @@ section {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-left: 40px;
-    margin-right: 40px;
+  }
+  .main .aPropos .content .imgBox {
+    margin-left: 0;
   }
   .main .aPropos .content .textBox {
     width: 100%;
     min-width: 100%;
   }
-  .main .aPropos .content .imgBox {
-    margin-left: 0;
-  }
-  .main .services {
-    padding: 0px;
-    padding-top: 80px;
-  }
-  .main .services .titre h2 {
-    white-space: nowrap;
-  }
   .main .services .content {
-    margin-left: 40px;
-    margin-right: 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .main .portfolio {
-    padding: 0px;
-    padding-top: 80px;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
   .main .portfolio .content {
-    margin-left: 40px;
-    margin-right: 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
   .main .portfolio .popupPortfolio {
-    width: calc(100% - 40px);
-    left: calc(50%);
+    left: 50%;
   }
-  .main .portfolio .popupPortfolio.active {
-    left: calc(50% + 90px);
-    width: calc(100% - 220px);
+  .main .portfolio .popupPortfolio.visible {
+    left: 50%;
   }
-  .main .portfolio .popupPortfolio.visible.active {
-    left: calc(50% + 90px);
-    width: calc(100% - 220px);
+}
+
+@media (max-width: 767px) {
+  .main .services .content {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
   }
-  #navigation {
-    width: 180px;
-    left: -100px;
+  .main .portfolio .content {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
   }
-  #navigation.active {
-    left: 0px;
-    width: 100%;
+  .main .portfolio .popupPortfolio {
+    left: 50%;
+    width: 90%;
   }
-  #navigation .listes {
-    margin: 10px 10px;
-    font-weight: 400;
-    font-size: 0.8em;
-  }
-  #navigation .listes::before {
-    height: 30px;
-    width: 30px;
-    top: 3px;
-    left: 3px;
-  }
-  #navigation .listes:hover::before {
-    width: 100%;
-  }
-  #navigation .listes .num {
-    font-weight: 400;
-    margin-right: 0px;
-  }
-  #navigation .colorMode {
-    left: 20px;
-  }
-  #navigation .colorMode::after {
-    content: "Dark Mode";
-  }
-  .darkMode #navigation .colorMode::after {
-    content: "Light Mode";
+  .main .portfolio .popupPortfolio.visible {
+    width: 90%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

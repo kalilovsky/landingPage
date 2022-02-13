@@ -6,6 +6,7 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior:smooth;
     
+    
 }
 //déclaration des variable pour el changement entre
 //mode dark et soft
@@ -38,7 +39,7 @@ section{
     left: 300px;
     min-height: 100vh;
     background-color: var(--white2);
-    // overflow-x: hidden;
+    overflow-x: hidden;
     transition: 0.5s;
     
    &.active {
@@ -385,7 +386,7 @@ section{
                 min-width: 200px;
                 max-height: 400px;
                 max-width: 400px;
-                
+                overflow-y: hidden;
                 cursor: pointer;
                 .imgBox{
                     img{
@@ -448,6 +449,7 @@ section{
         }
     }
     .container{
+        
         .main{
             .banner{
                 .content{
@@ -494,15 +496,16 @@ section{
     height: 100vh;
     background: var(--white);
     border-right: solid 1px rgba(19, 15, 15, 0.2);
-    
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     transition: 0.5s;
-    
+    white-space: nowrap;
     &.active {
-        left: -300px;
-        
+        left: 0;
+        width: 0;
+        transition: 0.5s;
     }
     .listes {
         position:relative;
@@ -611,256 +614,100 @@ section{
 }
 
 
-@media (max-width:1024px) {
-    .main {
-        padding: 100px 50px 150px;
-        left: 0px;
-        width: calc(100%);
-        &.active{
-            left: 100%;
-            width: calc(100%);
-            .services{
-                .content{
-                   display: flex;
-                   flex-direction: column;
-                   align-items: center;
-                }
-            }
-            .portfolio{
-                .content{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
-            }
-        }
-        .topBar{
-            left: 0px;
-            width: calc(100%);
-        }
-        .services{
-            .content{
-                grid-template-columns: repeat(2,1fr);
-                
-            }
-        }
-        .portfolio{
-            .content{
-                grid-template-columns: repeat(2,1fr);
-            }
-            .popupPortfolio{
-                width: calc(100% - 40px);
-                
-                left: calc(50%);
-                &.active{
-                    left: calc(50% + 125px);
-                    width: calc(100% - 290px);
-                }
-                &.visible{
-                    left: calc(50%);
-                    &.active{
-                        left: calc(50% + 125px);
-                        width: calc(100% - 290px);
-                    }
-                }
-            }
-        }
-    }
-    #navigation{
-        width: 250px;
-        left: -250px;
-        &.active{
-            left: 0px;
-        }
-        .listes{
-            margin: 10px 10px;
-            font-weight: 400;
-            font-size: 0.8em;
-            &::before{
-                height: 30px;
-                width: 30px;
-                top: 3px;
-                left: 3px;
-
-            }
-            &:hover::before{
-                width: 100%;
-            }
-            .num{
-                font-weight: 400;
-                margin-right: 0px;
-            }
-        }
-        .colorMode{
-            left: 20px;
-            &::after{
-                content: "Dark Mode";
-            }
-        }
-    }
-    .darkMode{
-        #navigation{
-            .colorMode{
-                &::after{
-                    content: "Light Mode";
-                }
-            }
-        }
-    }
+@media (max-width:992px) 
+{
     
-}
-@media (max-width:767px){
-    *{
-        // overflow: scroll;
-    }
-    .main {
-        padding: 100px 50px 150px;
-        left: 0px;
-        width: calc(100%);
+    #navigation{
+        left: 0;
+        width: 0%;
         
+        z-index: 10000;
         &.active{
-            left: 100%;
-            width: calc(100%);
+            left: 0;
+            width: 100%;
+            transition: 0.5s;
         }
+    }
+    .main{
+        width: 100%;
+        left: 0;
+        
         .topBar{
-            left: 0px;
-            width: calc(100%);
-            .logo{
-                font-size: 1.6em;
+            left: 0;
+            width: 100%;
+            transition: 0.1s;
+            &.active{
+                left: 0;
+                width: 100vw;
             }
-            // &.active{
-            //     left: 180px;
-            //     width: calc(100% - 180px);
-            // }
-
         }
         .banner{
             .content{
                 h2{
-                    font-size: 1.4em;
-                    text-align: center;
+                    span{
+                        font-size: 0.6em;
+                    }
                 }
-                p {
-                    text-align: center;
+                p{
                     font-size: 1em;
+                    text-align: center;
+                    font-weight: 400;
                 }
             }
         }
         .aPropos{
-            padding: 0;
-            padding-top: 80px;
-            .titre{
-                h2{
-                    white-space: nowrap;
-                    
-                }
-            }
+            
             .content{
+                display: flex;
                 flex-direction: column-reverse;
                 align-items: center;
-                justify-content: center;
-                margin-left: 40px;
-                margin-right: 40px;    
+                .imgBox{
+                    margin-left: 0;
+                }
                 .textBox{
                     width: 100%;
                     min-width: 100%;
                 }
-                .imgBox{
-                    margin-left: 0;
-                }
             }
+            
         }
         .services{
-            padding: 0px;
-            padding-top: 80px;
-            .titre{
-                h2{
-                    white-space: nowrap;
-                }
-            }
             .content{
-                margin-left: 40px;
-                margin-right: 40px;   
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                grid-template-columns: repeat(2,1fr);
             }
         }
         .portfolio{
-            padding: 0px;
-            padding-top: 80px;
             .content{
-                margin-left: 40px;
-                margin-right: 40px;   
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                grid-template-columns: repeat(2,1fr);
             }
             .popupPortfolio{
-                width: calc(100% - 40px);
-                
-                left: calc(50%);
-                &.active{
-                    left: calc(50% + 90px);
-                    width: calc(100% - 220px);
-                }
+                left: 50%;
                 &.visible{
-                    
-                    &.active{
-                        left: calc(50% + 90px);
-                        width: calc(100% - 220px);
-                    }
+                    left:50%;
                 }
             }
         }
-    }
-    
-    #navigation{
-        width: 180px;
-        left: -100px;
         
-        &.active{
-            left: 0px;
-            width: 100%;
-        }
-        .listes{
-            margin: 10px 10px;
-            font-weight: 400;
-            font-size: 0.8em;
-            &::before{
-                height: 30px;
-                width: 30px;
-                top: 3px;
-                left: 3px;
-
-            }
-            &:hover::before{
-                width: 100%;
-            }
-            .num{
-                font-weight: 400;
-                margin-right: 0px;
+    }    
+}
+@media (max-width:767px) {
+    .main{
+        .services{
+            .content{
+                grid-template-columns: repeat(1,1fr);
             }
         }
-        .colorMode{
-            left: 20px;
-            &::after{
-                content: "Dark Mode";
+        .portfolio{
+            .content{
+                grid-template-columns: repeat(1,1fr);
             }
-        }
-    }
-    .darkMode{
-        #navigation{
-            .colorMode{
-                &::after{
-                    content: "Light Mode";
+            .popupPortfolio{
+                left: 50%;
+                width: 90%;
+                &.visible{
+                    width: 90%;
                 }
             }
         }
     }
-    
-    
-    
 }
