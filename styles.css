@@ -123,6 +123,21 @@ section {
   background: var(--black);
 }
 
+.main .canvas1 {
+  position: absolute;
+  top: 60px;
+  z-index: 0;
+  left: 0;
+  width: 100%;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .main .banner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -310,6 +325,7 @@ section {
   min-height: 100vh;
   padding: 0 40px;
   padding-top: 80px;
+  z-index: 3;
 }
 
 .main .services .title {
@@ -361,6 +377,7 @@ section {
           box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  background-color: var(--white2);
 }
 
 .main .services .content .serviceBox:hover {
@@ -391,6 +408,7 @@ section {
 
 .main .portfolio {
   color: var(--black);
+  z-index: 2;
   padding: 0 40px;
   padding-top: 80px;
 }

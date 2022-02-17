@@ -97,3 +97,72 @@ Array.from(document.getElementsByClassName("listes")).forEach(e=>{
         }
     })
 })
+
+// window.addEventListener("onresize",drawForm());
+// window.addEventListener("load",drawForm());
+let canvas = document.getElementById("canvas1Left");
+let canvasRight1 = document.getElementById("canvas1Right");
+let ctx = canvas.getContext("2d");
+let ctxRight1 = canvasRight1.getContext("2d");
+// canvas.height = window.innerHeight;
+// canvas.width = window.innerWidth;
+ctx.translate(canvas.width/2,canvas.height/2);
+ctxRight1.translate(canvasRight1.width/2,canvasRight1.height/2)
+
+// let nodesjs = new NodesJs({
+//     id: 'nodes',
+//     width: window.innerWidth-300,
+//     height: window.innerHeight,
+//     particleSize:3,
+//     lineSize: 1,
+//     particleColor: [0, 0, 0, 0.3],
+//     lineColor: [0, 0, 0],
+//     backgroundFrom: [10, 25, 100],
+//     backgroundTo: [25, 50, 150],
+//     backgroundDuration: 40,
+//     nobg: true,
+//     number: window.hasOwnProperty('orientation') ? 30: 20,
+//     speed: 6});
+
+
+let cube1 = new cube(0,0,0,100,100,30,0,0,canvas,ctx);
+let form2 = new cube(0,0,0,100,100,25,0,0,canvasRight1,ctxRight1);
+
+cube1.createOctahedron();
+cube1.rotateX(30);
+cube1.rotateY(30);
+cube1.rotateZ(30);
+cube1.drawForm();
+form2.createTetragonal();
+form2.rotateX(60);
+form2.rotateY(60);
+form2.rotateZ(30);
+form2.drawForm();
+draw();
+function draw(){
+    cube1.rotateY(0.01);
+    // cube1.rotateX(0.01);
+    cube1.rotateZ(0.01);
+    ctx.clearRect(-canvas.width/2,-canvas.height/2,canvas.width,canvas.height);
+    cube1.drawForm();
+   
+    ctxRight1.clearRect(-canvasRight1.width/2,-canvasRight1.height/2,canvasRight1.width,canvasRight1.height);
+    form2.rotateY(0.01);
+    form2.rotateX(0.01);
+    form2.drawForm();
+     window.requestAnimationFrame(draw);
+
+}
+body.addEventListener('mousemove',e=>{
+     ctx.clearRect(-canvas.width/2,-canvas.height/2,canvas.width,canvas.height);
+    // cube1.rotateX(e.movementY/100);
+    cube1.rotateY(e.movementX/100);
+    // cube1.rotateZ(e.movementY/100);
+    cube1.drawForm();
+
+    ctxRight1.clearRect(-canvasRight1.width/2,-canvasRight1.height/2,canvasRight1.width,canvasRight1.height);
+    form2.rotateX(e.movementY/100);
+    // form2.rotateY(e.movementX/100);
+    form2.drawForm();
+})
+
