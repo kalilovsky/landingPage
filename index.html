@@ -9,6 +9,7 @@
     <title>Document</title>
 </head>
 <body class="">
+    
     <div class="container">
         <div id="navigation">
             
@@ -60,9 +61,9 @@
                 <a href="#" class="logo">fullstack </a>
                 <div id="toggle"></div>
             </div>
-            <div class="canvas1">
-            <canvas id="canvas1Left"></canvas>
-            <canvas id="canvas1Right"></canvas>
+            <div class="canvas1" id="ctxContainer">
+                <canvas id="canvas"></canvas>
+                
             </div>
             <section class="banner" id="sec">
                 
@@ -139,7 +140,7 @@
                     <div class="serviceBox">
                         <img src="./ressources/images/icon5.png" alt="">
                         <h2>WORDPRESS</h2>
-                        <p>Pour avoir créer et gérer pendant 2 ans, deux sites de E-Commerce, j'ai une une bonne expérience de Worpress,
+                        <p>Pour avoir créer et gérer pendant 2 ans, deux sites de E-Commerce, j'ai une une bonne expérience de Wordpress,
                              et WooCommerce.</p>
                     </div>
                     <div class="serviceBox">
@@ -170,11 +171,11 @@
                 <div class="content">
                     <div class="slideBox" id="slide1">
                         <div class="imgBox">
-                            <img src="./ressources/images/img1.jpg" alt="">
+                            <img src="./ressources/images/tetrix.png" alt="">
                         </div>
                         <div class="textBox">
                             <h3>Tetrix</h3>
-                            <p>Le fameux jeu Tetris revisité à la sauce Matrix sous JavaScript.</p>
+                            <p>Le fameux jeu Tetris revisité à la sauce Matrix avec JavaScript et l'API Canvas.</p>
                         </div>
                     </div>
                     <div class="slideBox"id="slide2">
@@ -182,7 +183,8 @@
                             <img src="./ressources/images/img2.jpg" alt="">
                         </div>
                         <div class="textBox">
-                           <h3>Projet 02</h3> 
+                           <h3>Quizz <br>"HTML JS"</h3> 
+                           <p>Un quizz abordant 4 themes avec des question, avec gestion d'utilisateurs et d'historique de jeux.</p>
                         </div>
                     </div>
                     <div class="slideBox"id="slide3">
@@ -190,7 +192,8 @@
                             <img src="./ressources/images/img3.jpg" alt="">
                         </div>
                         <div class="textBox">
-                           <h3>Projet 03</h3> 
+                           <h3>Quizz <br>"PHP JS MYSQL"</h3> 
+                           <p>Un quizz abordant 4 themes avec des question, avec gestion d'utilisateurs et d'historique de jeux.</p>
                         </div>
                     </div>
                     <div class="slideBox" id="slide4">
@@ -198,7 +201,8 @@
                             <img src="./ressources/images/img4.jpg" alt="">
                         </div>
                         <div class="textBox">
-                            <h3>Projet 04</h3>
+                            <h3>Cette Landing Page </h3>
+                            <p>Page responsive, avec des formes 2D ayant des mouvements imitant le mouvement 3D, dessinées grace à l'API Canvas.</p>
                         </div>
                     </div>
                     <div class="slideBox" id="slide5">
@@ -206,7 +210,8 @@
                             <img src="./ressources/images/img5.jpg" alt="">
                         </div>
                         <div class="textBox">
-                            <h3>Projet 05</h3>
+                            <h3>Site E-Commerce</h3>
+                            <p>Site de E-Commerce "Habillement" fonctionelle, établi depuis plus d'un an conçu avec Wordpress et WooCommerce.</p>
                         </div>
                     </div>
                     <div class="slideBox" id="slide6">
@@ -214,7 +219,8 @@
                             <img src="./ressources/images/img6.jpg" alt="">
                         </div>
                         <div class="textBox">
-                            <h3>Projet 06</h3>
+                            <h3>Site E-Commerce</h3>
+                            <p>Site de E-Commerce "Vente carte cadeau virtuelle" fonctionelle, établi depuis plus d'un an conçu avec Wordpress et WooCommerce.</p>
                         </div>
                     </div>
                     <div class="slideBox" id="slide7">
@@ -222,7 +228,8 @@
                             <img src="./ressources/images/img7.jpg" alt="">
                         </div>
                         <div class="textBox">
-                            <h3>Projet 07</h3>
+                            <h3>Site E-Commerce</h3>
+                            <p>Site de E-Commerce "Vente carte cadeau virtuelle" pas encore fnctionelles, conçu avec Wordpress et WooCommerce.</p>
                         </div>
                     </div>
                     <div class="slideBox" id="slide8">
@@ -230,7 +237,8 @@
                             <img src="./ressources/images/img8.jpg" alt="">
                         </div>
                         <div class="textBox">
-                            <h3>Projet 08</h3>
+                            <h3>SAV Télephonie</h3>
+                            <p>Une application crée avec VBA et Excel, l'objectif étant de gérer un SAV de téléphonie mobile.</p>
                         </div>
                     </div>
                     <div class="slideBox" id="slide9">
@@ -238,7 +246,8 @@
                             <img src="./ressources/images/img9.jpg" alt="">
                         </div>
                         <div class="textBox">
-                            <h3>Projet 09</h3>
+                            <h3>Rapport Equipe Commerciale</h3>
+                            <p>Une application créer avec VBA et Excel, l'objectif était de facilité le reporting journalier des commerciaux.</p>
                         </div>
                     </div>
                 </div>
@@ -249,7 +258,10 @@
         </div>
         
     </div>
-    <script src="./nodes.js"></script>
+    <script src="./ressources/js/vecteur.js"></script>
+    <script src="./ressources/js/malibrairie.js"></script>
+    <script src="./ressources/js/node.js"></script>
+    <script src="./ressources/js/scene.js"></script>
     <script src="./ressources/js/formes.js"></script>
     <script src="./jscript.js"></script>
     
