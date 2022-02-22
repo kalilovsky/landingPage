@@ -174,7 +174,7 @@ function render() {
     ctx.fillStyle = "black";
     for (let i = 0; i < nbrNodes; i++) {
 
-        nodes[i].mouvementSpherique(0.1, centerGravity);
+        nodes[i].mouvementSpherique(0.05, centerGravity);
         nodes[i].draw(ctx);
     }
     window.requestAnimationFrame(render);
