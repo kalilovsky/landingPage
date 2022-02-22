@@ -1,6 +1,7 @@
 //https://www.mamboleoo.be/articles/how-to-render-3d-in-2d-canvas
 //https://www.youtube.com/watch?v=AOu1awuEqjE
 //https://dynref.engr.illinois.edu/rvs.html
+//Class dévellopée par Medjahed Khalil inspiré par les projets cités au dessus
 
 class nodeThreeD {
 
@@ -67,7 +68,7 @@ class nodeThreeD {
             this.gravityCenter.x += Math.cos(testangle) * perframe;
         } else if(distanceBetween >= 100){
             let testangle = this.gravityCenter.angleTo(centerPos);
-            let perframe = randomBetween(6, 10);
+            let perframe = randomBetween(6,15);
             this.gravityCenter.y += Math.sin(testangle) * perframe;
             this.gravityCenter.x += Math.cos(testangle) * perframe;
         }
