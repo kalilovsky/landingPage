@@ -577,6 +577,44 @@ section {
   text-align: center;
 }
 
+.main .portfolio .content .slideBox .textBox .btnInterne {
+  position: relative;
+  bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  padding: 20px 10px;
+  gap: 20px;
+}
+
+.main .portfolio .content .slideBox .textBox .btnInterne button {
+  padding: 05px 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #fdfdfd;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.8em;
+  word-spacing: 1px;
+}
+
+.main .portfolio .content .slideBox .textBox .btnInterne button:hover {
+  background-color: rgba(33, 150, 242, 0.2);
+}
+
+.main .portfolio .content .slideBox .textBox .btnInterne button i {
+  margin: 10px 5px;
+}
+
 .main .portfolio .content .slideBox:hover .textBox {
   position: absolute;
   top: 0;

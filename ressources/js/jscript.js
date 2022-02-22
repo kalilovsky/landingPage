@@ -25,72 +25,72 @@ colorSwitch.addEventListener("click", function () {
 document.getElementById("popUpCloseBtn").addEventListener("click", () => {
     document.getElementById("popupPortfolio").classList.remove("visible");
 });
-Array.from(document.getElementsByClassName("slideBox")).forEach(e => {
-    e.addEventListener("click", () => {
-        switch (e.id) {
-            case "slide1":
-                popupPortfolio.classList.add("visible");
-                console.log(childPopup);
-                childPopup[1].innerHTML = "Tetrix";
-                childPopup[2].innerHTML = "ojoaijoiaejapoifj"
-                break;
-            case "slide2":
-                popupPortfolio.classList.add("visible");
-                console.log(childPopup);
-                childPopup[1].innerHTML = "khalil";
-                childPopup[2].innerHTML = "ojoaijoiaejapoifj"
-                break;
-            case "slide3":
-                popupPortfolio.classList.add("visible");
-                console.log(childPopup);
-                childPopup[1].innerHTML = "khalil";
-                childPopup[2].innerHTML = "ojoaijoiaejapoifj"
-                break;
-            case "slide4":
-                popupPortfolio.classList.add("visible");
-                console.log(childPopup);
-                childPopup[1].innerHTML = "khalil";
-                childPopup[2].innerHTML = "ojoaijoiaejapoifj"
-                break;
-            case "slide5":
-                popupPortfolio.classList.add("visible");
-                console.log(childPopup);
-                childPopup[1].innerHTML = "khalil";
-                childPopup[2].innerHTML = "ojoaijoiaejapoifj"
-                break;
-            case "slide6":
-                popupPortfolio.classList.add("visible");
-                console.log(childPopup);
-                childPopup[1].innerHTML = "khalil";
-                childPopup[2].innerHTML = "ojoaijoiaejapoifj"
-                break;
-            case "slide7":
-                popupPortfolio.classList.add("visible");
-                console.log(childPopup);
-                childPopup[1].innerHTML = "khalil";
-                childPopup[2].innerHTML = "ojoaijoiaejapoifj"
-                break;
-            case "slide8":
-                popupPortfolio.classList.add("visible");
-                console.log(childPopup);
-                childPopup[1].innerHTML = "khalil";
-                childPopup[2].innerHTML = "ojoaijoiaejapoifj"
-                break;
-            case "slide9":
-                popupPortfolio.classList.add("visible");
-                console.log(childPopup);
-                childPopup[1].innerHTML = "khalil";
-                childPopup[2].innerHTML = "ojoaijoiaejapoifj"
-                break;
-            case "slide1":
-                popupPortfolio.classList.add("visible");
-                console.log(childPopup);
-                childPopup[1].innerHTML = "khalil";
-                childPopup[2].innerHTML = "ojoaijoiaejapoifj"
-                break;
-        }
-    })
-});
+// Array.from(document.getElementsByClassName("slideBox")).forEach(e => {
+//     e.addEventListener("click", () => {
+//         switch (e.id) {
+//             case "slide1":
+//                 popupPortfolio.classList.add("visible");
+//                 console.log(childPopup);
+//                 childPopup[1].innerHTML = "Tetrix";
+//                 childPopup[2].innerHTML = "ojoaijoiaejapoifj"
+//                 break;
+//             case "slide2":
+//                 popupPortfolio.classList.add("visible");
+//                 console.log(childPopup);
+//                 childPopup[1].innerHTML = "khalil";
+//                 childPopup[2].innerHTML = "ojoaijoiaejapoifj"
+//                 break;
+//             case "slide3":
+//                 popupPortfolio.classList.add("visible");
+//                 console.log(childPopup);
+//                 childPopup[1].innerHTML = "khalil";
+//                 childPopup[2].innerHTML = "ojoaijoiaejapoifj"
+//                 break;
+//             case "slide4":
+//                 popupPortfolio.classList.add("visible");
+//                 console.log(childPopup);
+//                 childPopup[1].innerHTML = "khalil";
+//                 childPopup[2].innerHTML = "ojoaijoiaejapoifj"
+//                 break;
+//             case "slide5":
+//                 popupPortfolio.classList.add("visible");
+//                 console.log(childPopup);
+//                 childPopup[1].innerHTML = "khalil";
+//                 childPopup[2].innerHTML = "ojoaijoiaejapoifj"
+//                 break;
+//             case "slide6":
+//                 popupPortfolio.classList.add("visible");
+//                 console.log(childPopup);
+//                 childPopup[1].innerHTML = "khalil";
+//                 childPopup[2].innerHTML = "ojoaijoiaejapoifj"
+//                 break;
+//             case "slide7":
+//                 popupPortfolio.classList.add("visible");
+//                 console.log(childPopup);
+//                 childPopup[1].innerHTML = "khalil";
+//                 childPopup[2].innerHTML = "ojoaijoiaejapoifj"
+//                 break;
+//             case "slide8":
+//                 popupPortfolio.classList.add("visible");
+//                 console.log(childPopup);
+//                 childPopup[1].innerHTML = "khalil";
+//                 childPopup[2].innerHTML = "ojoaijoiaejapoifj"
+//                 break;
+//             case "slide9":
+//                 popupPortfolio.classList.add("visible");
+//                 console.log(childPopup);
+//                 childPopup[1].innerHTML = "khalil";
+//                 childPopup[2].innerHTML = "ojoaijoiaejapoifj"
+//                 break;
+//             case "slide1":
+//                 popupPortfolio.classList.add("visible");
+//                 console.log(childPopup);
+//                 childPopup[1].innerHTML = "khalil";
+//                 childPopup[2].innerHTML = "ojoaijoiaejapoifj"
+//                 break;
+//         }
+//     })
+// });
 Array.from(document.getElementsByClassName("listes")).forEach(e => {
     e.addEventListener("click", () => {
         if (document.body.offsetWidth < 1024) {
