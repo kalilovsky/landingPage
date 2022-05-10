@@ -186,12 +186,18 @@ main.addEventListener('mousemove', e => {
     forme1.rotateY(e.movementX / 500);
     forme2.rotateX(e.movementY / 500);
     forme2.rotateZ(e.movementX / 500);
+    // console.log(e.movementX);
     // forme1.rotateZ(e.movementY/100);
     //forme1.moveXY(e.movementX, e.movementY);
     centerGravity.x = e.pageX - main.offsetLeft;
     centerGravity.y = e.pageY;
 
 });
+
+main.addEventListener("touchmove", e=>{
+    centerGravity.x = e.touches[0].pageX - main.offsetLeft;
+    centerGravity.y = e.touches[0].pageY;
+})
 
 function ctxResize() {
     width = main.clientWidth;
