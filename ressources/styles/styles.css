@@ -529,7 +529,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 200px;
+  min-height: 300px;
   min-width: 200px;
   max-height: 400px;
   max-width: 400px;
@@ -566,11 +566,9 @@ section {
   top: 100%;
   min-height: 100%;
   min-width: 100%;
-  background-color: rgba(49, 49, 46, 0.3);
+  background-color: gray;
   -webkit-transition: top 0.5s;
   transition: top 0.5s;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
 }
 
 .main .portfolio .content .slideBox .textBox p {
@@ -596,7 +594,7 @@ section {
 
 .main .portfolio .content .slideBox .textBox .btnInterne button {
   padding: 05px 10px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fdfdfd;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -779,7 +777,7 @@ section {
 
 #navigation .colorMode {
   position: absolute;
-  bottom: 10px;
+  top: 80%;
   left: 40px;
   height: 30px;
   width: 30px;
